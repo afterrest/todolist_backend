@@ -2,7 +2,10 @@ package com.example.todolist;
 
 
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.JoinColumn;
@@ -19,11 +22,12 @@ import java.util.List;
 @Entity
 @Getter//getter 메소드 자동생성
 @Setter//setter 메소드 자동생성
-public class Sections {
+public class Section {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
     @OneToMany(cascade = CascadeType.REMOVE)
     @JoinColumn(name="section_id")
-    private List<Tasks> tasks;
+    private List<Task> tasks;
 }
