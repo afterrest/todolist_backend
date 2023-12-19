@@ -10,7 +10,7 @@ import static org.testng.Assert.assertTrue;
 @SpringBootTest
 class TodolistApplicationTests {
     @Autowired
-    private SectionsRepository sectionsRepository;
+    private SectionRepository sectionRepository;
 /*    @Test
     void contextLoads() {
         Sections s1 = new Sections();
@@ -28,10 +28,10 @@ class TodolistApplicationTests {
     }*/
     @Test
     void contextDelete() {
-        Optional<Section> sc = this.sectionsRepository.findById(3);
+        Optional<Section> sc = this.sectionRepository.findById(3);
         assertTrue(sc.isPresent());
         Section s1 = sc.get();
-        this.sectionsRepository.delete(s1);
+        this.sectionRepository.delete(s1);
     }
 
 }
