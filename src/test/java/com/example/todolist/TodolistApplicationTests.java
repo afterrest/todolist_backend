@@ -1,5 +1,7 @@
 package com.example.todolist;
 
+import com.example.todolist.todolist.section.Section;
+import com.example.todolist.todolist.section.SectionRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

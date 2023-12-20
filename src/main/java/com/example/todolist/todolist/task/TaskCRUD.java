@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.todolist.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,16 +6,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-
-import org.springframework.web.bind.annotation.PathVariable;
-import static org.testng.Assert.assertTrue;
-
 @Service
-public class TodolistCRUD {
+public class TaskCRUD {
     @Autowired //의존성 주입
     private TaskRepository taskRepository;
 
-    public TodolistCRUD(TaskRepository taskRepository) {
+    public TaskCRUD(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
 
@@ -30,11 +26,13 @@ public class TodolistCRUD {
     public List<Task> getAllTasks() {
         return taskRepository.findAll();
     }
-    public Task updateTask(Integer taskId, Task updatedUser) {
+    public Task updateTask(Integer taskId, Task updatedTask) {
+        System.out.println("update tried");
         Optional<Task> taskOptional = taskRepository.findById(taskId);
         if (taskOptional.isPresent()) {
+
             Task existingTask = taskOptional.get();
-            existingTask.setName(updatedUser.getName());
+            existingTask.setName(updatedTask.getName());
             // 추가적인 필드 업데이트
             return taskRepository.save(existingTask);
         } else {

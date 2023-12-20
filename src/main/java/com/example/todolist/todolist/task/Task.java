@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.todolist.task;
 
 import jakarta.persistence.Entity;
 
@@ -21,7 +21,7 @@ public class Task {
     private Integer id;
     private Integer section_id;
     private String name;
-    private boolean completed;
+    private boolean completed = false;
 
 //    @ManyToOne
 //    @JoinColumn(name = "section_id", referencedColumnName = "id")
