@@ -1,5 +1,7 @@
-package com.example.todolist.todolist.task;
+package com.example.todolist.todolist.dao;
 
+import com.example.todolist.todolist.entity.Task;
+import com.example.todolist.todolist.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

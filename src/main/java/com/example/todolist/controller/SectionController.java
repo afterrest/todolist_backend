@@ -1,5 +1,7 @@
-package com.example.todolist.todolist.section;
+package com.example.todolist.controller;
 
+import com.example.todolist.todolist.entity.Section;
+import com.example.todolist.todolist.dao.SectionCRUD;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

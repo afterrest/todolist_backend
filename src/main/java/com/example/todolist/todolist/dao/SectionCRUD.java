@@ -1,5 +1,7 @@
-package com.example.todolist.todolist.section;
+package com.example.todolist.todolist.dao;
 
+import com.example.todolist.todolist.entity.Section;
+import com.example.todolist.todolist.repository.SectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

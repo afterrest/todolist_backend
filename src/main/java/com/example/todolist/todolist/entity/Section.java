@@ -1,7 +1,6 @@
-package com.example.todolist.todolist.section;
+package com.example.todolist.todolist.entity;
 
 
-import com.example.todolist.todolist.task.Task;
 import jakarta.persistence.Entity;
 
 import jakarta.persistence.Id;
